@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+
+       xsi:schemaLocation="
+http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="classicMusic" class="music.ClassicMusic" />
+    <bean id="popMusic" class="music.PopMusic" />
+    <bean id="musicPlayer" class="music.MusicPlayer">
+           <property name="music" ref="popMusic"/>
+            <property name="volume" value="75КГц"/>
+            <property name="power" value="35"/>
+            <property name="isWorking" value="true"/>
+    </bean>
+
+</beans>
